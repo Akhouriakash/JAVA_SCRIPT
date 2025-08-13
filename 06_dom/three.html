@@ -13,11 +13,12 @@
     console.log(div);
     div.className = "main"
     div.id = Math.round(Math.random()*10+1)
-    div.setAttribute("title", "generated title")  // imp
+    div.setAttribute("title", "generated title")  // imp : it will directly set the value 
     div.style.backgroundColor = "green"
     div.style.padding = "12px";
-    // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur Code")
+    // div.innerText = "Chai aur code" // but in others it will override the value ,purane value  phle leke ata h value phir usme set krta h 
+
+    const addText = document.createTextNode("Chai aur Code") // khudka node create kr raha hum
     div.appendChild(addText)
 
     document.body.appendChild(div)
